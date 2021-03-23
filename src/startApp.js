@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
-import header from '../componentes/header';
+import MenuTop from '../componentes/MenuTop';
 
-class startApp extends Component {
+class StartApp extends Component {
     render(){
         return(
             <div className="inicio">
-                <header />
+                <MenuTop />
             </div>
         )
     }
 }
-export default startApp;
+export default StartApp;

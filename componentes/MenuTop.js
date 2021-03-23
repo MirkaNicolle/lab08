@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import './header.css';
+import './MenuTop.css';
 
-export default class header extends Component{
+export default class MenuTop extends Component{
     render(){
         return (
             <header>
