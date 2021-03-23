@@ -9,7 +9,7 @@ export default class Tablero extends Component{
             <div className="tablero">
                 <ul>
                     {cartas.map((carta) => (
-                    <li key={Carta}></li>
+                    <li key={carta}></li>
                     ))}
                 </ul>
             </div>
