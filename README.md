@@ -6,4 +6,4 @@ Como correrlo:
 
 1. tener node.js
 2. npm install
-3. npm start 
+3. npm run-script start 

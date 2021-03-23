@@ -18,6 +18,10 @@ module.exports = {
   ],
   module: {
     rules: [
+      { 
+        test: /\.jpg$/, 
+        loader: "file-loader" 
+      },
       {
         test: /\.css$/i,
         use: [

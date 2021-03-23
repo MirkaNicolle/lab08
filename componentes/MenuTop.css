@@ -7,19 +7,32 @@ header {
 }
 
 .titulo {
-    font-size: 30px;
+    font-size: 45px;
     padding: 10px;
     color: white;
 }
 
 .reiniciarBoton {
-    position: absolute;
+    position:absolute;
+    border: none;
+    border-radius: 12px;
+    background-color: chartreuse;
+    text-align: center;
+    font-size: 15px;
+    cursor: pointer;
+    padding: 12px 28px;
+    top: 75px;
     left: 12px;
-    top: 58px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    transition-duration: 0.4s;
+}
+
+.reiniciarBoton:hover{
+    background-color:lightsteelblue;
 }
 
 .subtitulo {
-    font-size: 25px;
+    font-size: 35px;
     padding: 10px;
     color: fuchsia;
 }
