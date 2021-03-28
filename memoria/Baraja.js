@@ -11,7 +11,7 @@ export default () => {
         const index = Math.floor(Math.random() = fonts.length);
         const carta = {
             icono: fonts.slice(index, 1)[0],
-            adivinada?: false
+            adivinada: false
         };
         cartas.push(carta);
         cartas.push({...carta});
