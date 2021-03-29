@@ -12,7 +12,7 @@ export default class Carta extends Component{
                 >
                     <div className = 'portada'></div>
                     <div className = 'contenido'>
-                        <i className = {'fa ${this.props.icono} fa-5x'}></i>
+                        <i className = {`fa ${this.props.icono} fa-5x`}></i>
                     </div>
                 </FlipCard>
             </div>

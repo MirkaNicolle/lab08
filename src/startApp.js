@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Carta from '../componentes/Carta';
 import MenuTop from '../componentes/MenuTop';
 import Tablero from '../componentes/Tablero';
 import Baraja from '../memoria/Baraja';
@@ -9,7 +8,8 @@ const iniciar = () => {
     return {
         baraja,
         parejaSeleccionada: [],
-        comparado: false
+        comparado: false,
+        numeroIntentos: 0
     };
 }
 
@@ -22,7 +22,10 @@ class StartApp extends Component {
     render(){
         return(
             <div className="inicio">
-                <MenuTop />
+                <MenuTop 
+                    numeroIntentos = {this.state.numeroIntentos}
+                    reset = {() => this.resetearPartida()}
+                />
                 <Tablero 
                     baraja = {this.state.baraja}
                     parejaSeleccionada = {this.state.parejaSeleccionada}
@@ -70,7 +73,8 @@ class StartApp extends Component {
             this.setState({
                 parejaSeleccionada: [],
                 baraja,
-                comparada: false
+                comparada: false,
+                numeroIntentos: this.state.numeroIntentos + 1
             })
         }, 1000)
     }
@@ -79,8 +83,14 @@ class StartApp extends Component {
         if (
             baraja.filter((carta) => !carta.adivinada).length === 0
         ){
-            alert ('Ganaste ')
+            alert (`Ganaste en ${this.state.numeroIntentos} intentos!`)
         }
+    }
+
+    resetearPartida() {
+        this.setState(
+            iniciar()
+        );
     }
 }
 export default StartApp;

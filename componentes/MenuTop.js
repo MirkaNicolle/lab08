@@ -7,9 +7,13 @@ export default class MenuTop extends Component{
             <header>
                 <div className="titulo">Memoria con React</div>
                 <div>
-                    <button className="reiniciarBoton">Reiniciar partida</button>
+                    <button className="reiniciarBoton" onClick = {this.props.resetearPartida}>
+                        Reiniciar partida
+                    </button>
                 </div>
-                <div className="subtitulo">Intentos: </div>
+                <div className="subtitulo">
+                    Intentos: {this.props.numeroIntentos}
+                </div>
             </header>
         );
     }
