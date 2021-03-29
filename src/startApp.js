@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import MenuTop from '../componentes/MenuTop';
 import Tablero from '../componentes/Tablero';
-import Baraja from '../memoria/Baraja';
+import Baraja from '../componentes/Baraja';
 
 const iniciar = () => {
     const baraja = Baraja();
