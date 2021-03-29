@@ -5,8 +5,11 @@ import FlipCard from 'react-flipcard';
 export default class Carta extends Component{
     render() {
         return (
-            <div className="carta">
-                <FlipCard>
+            <div className="carta" onClick = {this.props.seleccionarCarta}>
+                <FlipCard
+                    flipped = {this.props.comparada || this.props.adivinada}
+                    disable = {true}
+                >
                     <div className = 'portada'></div>
                     <div className = 'contenido'>
                         <i className = {'fa ${this.props.icono} fa-5x'}></i>

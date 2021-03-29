@@ -34,7 +34,7 @@ class StartApp extends Component {
 
     seleccionarCarta(carta) {
         if (
-            this.state.comparado ||
+            this.state.comparada ||
             this.state.parejaSeleccionada.indexOf(carta) > -1 ||
             carta.adivinada
         ){
@@ -43,8 +43,44 @@ class StartApp extends Component {
         const parejaSeleccionada = [...this.state.parejaSeleccionada, carta];
         this.setState({
             parejaSeleccionada
-        })
+        });
+
+        if (parejaSeleccionada.length === 2) {
+            this.compararPareja(parejaSeleccionada);
+        }
     }
     
+    compararPareja(parejaSeleccionada) {
+        this.setState({comparada: true});
+
+        setTimeout(() => {
+            const [primeraCarta, segundaCarta] = parejaSeleccionada;
+            let baraja = this.state.baraja;
+
+            if (primeraCarta.icono === segundaCarta.icono) {
+                baraja = baraja.map (() => {
+                    if (carta.icono !== primeraCarta.icono){
+                        return carta;
+                    }
+                    return {...carta, adivinada: true};
+                });
+            }
+            this.ganador(baraja);
+
+            this.setState({
+                parejaSeleccionada: [],
+                baraja,
+                comparada: false
+            })
+        }, 1000)
+    }
+
+    ganador(baraja){
+        if (
+            baraja.filter((carta) => !carta.adivinada).length === 0
+        ){
+            alert ('Ganaste ')
+        }
+    }
 }
 export default StartApp;
