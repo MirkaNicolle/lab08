@@ -1,10 +1,9 @@
 import shuffle from 'lodash.shuffle';
-import { array } from 'prop-types';
 
 const noCartas = 20;
 
 export default () => {
-    const imagenes = new array("img/a.png", "img/b.png", "img/c.png", "img/d.png", "img/e.png", "img/f.png", "img/g.png", "img/h.png", "img/i.png", "img/j.png");
+    const imagenes = ["img/a.png", "img/b.png", "img/c.png", "img/d.png", "img/e.png", "img/f.png", "img/g.png", "img/h.png", "img/i.png", "img/j.png"];
     let cartas = [];
 
     while (cartas.length < noCartas) {

@@ -9,7 +9,7 @@ export default class Tablero extends Component{
                 {
                     this.props.baraja
                     .map((carta, index) => {
-                        const siendoComparada = this.props.parejaSeleccionadaindexOf(carta) > -1;
+                        const siendoComparada = this.props.parejaSeleccionada.indexOf(carta) > -1;
                         return <Carta 
                             key = {index}
                             icono = {carta.icono}
