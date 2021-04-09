@@ -76,7 +76,7 @@ class StartApp extends Component {
                 comparada: false,
                 numeroIntentos: this.state.numeroIntentos + 1
             })
-        }, 1000)
+        },1000)
     }
 
     ganador(baraja){
