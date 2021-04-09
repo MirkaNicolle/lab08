@@ -61,7 +61,7 @@ class StartApp extends Component {
             let baraja = this.state.baraja;
 
             if (primeraCarta.icono === segundaCarta.icono) {
-                baraja = baraja.map (() => {
+                baraja = baraja.map ((carta) => {
                     if (carta.icono !== primeraCarta.icono){
                         return carta;
                     }
