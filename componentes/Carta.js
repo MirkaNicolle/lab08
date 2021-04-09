@@ -7,7 +7,7 @@ export default class Carta extends Component{
         return (
             <div className="carta" onClick = {this.props.seleccionarCarta}>
                 <FlipCard
-                    flipped = {this.props.comparada || this.props.adivinada}
+                    flipped = {this.props.siendoComparada || this.props.adivinada}
                     disabled = {true}
                 >
                     <div className = 'portada'></div>
